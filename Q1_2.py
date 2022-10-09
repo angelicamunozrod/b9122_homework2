@@ -2,6 +2,8 @@ from bs4 import BeautifulSoup
 import urllib.request
 import re
 
+
+
 seed_url = "https://www.sec.gov/news/pressreleases"
 
 
@@ -9,10 +11,10 @@ urls = [seed_url]    #queue of urls to crawl
 seen = [seed_url]    #stack of urls seen so far
 urls_charges = []    #queue of urls to crawl
 opened = []
-matrix = []
+text_urls = []
 
 
-maxNumUrl = 20; #set the maximum number of urls to visit
+maxNumUrl = 25; #set the maximum number of urls to visit
 print("Starting with url="+str(urls))
 while len(urls) > 0 and len(urls_charges) < maxNumUrl and urls not in seen:
     try:
@@ -48,11 +50,10 @@ while len(urls) > 0 and len(urls_charges) < maxNumUrl and urls not in seen:
         if 'https://www.sec.gov/news/pressrelease/' in childUrl and childUrl not in seen:
             urls.append(childUrl)
             seen.append(childUrl)
-            matrix.append([list, childUrl])
+            text_urls.append([list, childUrl])
 
 
 
-#del matrix[:2]
-print(matrix[2:22])
+print(text_urls[2:22])
 
 

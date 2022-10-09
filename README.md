@@ -7,11 +7,10 @@ Table of contents
 * [webcrawler](#webcrawler)
 
 ## Q1_1
-This code crawl pages from the press releases of The Federal Reserve System, colects pages that contanin the word "covid", and print this URLs.
+This code crawl pages from the press releases of The Federal Reserve System, colects pages that contanin the word "covid", and print 10 URLs.
 
 ## Q1_2
-This code crawl pages from the press releases of Securities and Exchange Commission, colects pages that contanin the word "charge", 
-and print the firts links that it finds. 
+This code crawl pages from the press releases of Securities and Exchange Commission, colects pages that contanin the word "charge", and print the firts 20 links. 
 
 ## webcrawler
 This code process all web pages that are under a single domain: www.gsb.columbia.edu
